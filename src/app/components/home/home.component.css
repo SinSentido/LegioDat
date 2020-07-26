@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    min-height: 100%;
+}
+
+
+/**************************************/
+/*TOP BANNER SECTION*/
+/**************************************/
+
+.top-banner{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 500px;
+    background-image: url(../../../assets/images/water_banner.jpg);
+    background-size: cover;
+}
+
+.top-banner-text{
+    width: 40%;
+    padding: 5%;
+}
+
+.top-banner-image{
+    width: 50%;
+}
+
+.top-banner-image img{
+    max-width: 80%;
+}
+
+.download-button{
+    margin-top: 10%;
+}
+
+
+/**************************************/
+/*FEATURES SECTION*/
+/**************************************/
+
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-row{
+    display: flex;
+    justify-content: center;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature img{
+    width: 30%;
+    height: 100%;
+}
+
+
+/**************************************/
+/*INFO SECTION*/
+/**************************************/
+
+.info{
+    display:flex;
+}
+
+.info-image{
+    width: 50%;
+}
+
+.info-image img{
+    width: 100%;
+}
+
+
+/**************************************/
+/*STATISTICS SECTION*/
+/**************************************/
+.statistics{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphic{
+    height: 300px;
+    min-width: 800px;
+    width: 800px;
+    position: relative;
+}
+
+/*lines*/
+.join-line1, .join-line2, .join-line3, .join-line4, .join-line5, .join-line6, 
+.join-line7{
+    position: absolute;
+    background: red;
+    width: 0px;
+    height: 3px;
+}
+
+.join-line1 {
+    transform: rotate(-38deg);
+    top: -35px;
+    left: 43%;
+    transform-origin: 14em 30em;
+    animation: move1 0.5s 1s linear forwards;
+}
+
+.join-line2 {
+    transform: rotate(1deg);
+    transform-origin: 20em -22em;
+    top: 155px;
+    left: 23%;
+    animation: move2 0.5s 1.5s linear forwards;
+}
+
+.join-line3 {
+    transform: rotate(-8deg);
+    transform-origin: 20em -22em;
+    top: 110px;
+    left: 25%;
+    animation: move2 0.5s 2s linear forwards;
+}
+
+.join-line4 {
+    transform: rotate(-1deg);
+    transform-origin: 20em -22em;
+    top: 135px;
+    left: 40%;
+    animation: move2 0.5s 2.5s linear forwards;
+}
+
+.join-line5 {
+    transform: rotate(-1deg);
+    transform-origin: 20em -22em;
+    top: 133px;
+    left: 51%;
+    animation: move2 0.5s 3s linear forwards;
+}
+
+.join-line6 {
+    transform: rotate(-15deg);
+    transform-origin: 20em -22em;
+    top: 68px;
+    left: 48%;
+    animation: move2 0.5s 3.5s linear forwards;
+}
+
+.join-line7 {
+    transform: rotate(-15deg);
+    transform-origin: 20em -22em;
+    top: 47px;
+    left: 58%;
+    animation: move2 0.5s 4s linear forwards;
+}
+
+/*balls*/
+.ball1, .ball2, .ball3, .ball4, .ball5, .ball6, .ball7, .ball8{
+    background-color: #2187e7;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 99;
+    transform: scale(0);
+}
+
+.ball1{
+    animation: point 0.1s linear forwards;
+}
+
+.ball2{
+    animation: point 0.1s 1.45s linear forwards;
+}
+
+.ball3{
+    animation: point 0.1s 1.95s linear forwards;
+}
+
+.ball4{
+    animation: point 0.1s 2.45s linear forwards;
+}
+
+.ball5{
+    animation: point 0.1s 2.95s linear forwards;
+}
+
+.ball6{
+    animation: point 0.1s 3.45s linear forwards;
+}
+
+.ball7{
+    animation: point 0.1s 3.95s linear forwards;
+}
+
+.ball8{
+    animation: point 0.1s 4.45s linear forwards;
+}
+
+/*pulses*/
+.pulse1, .pulse2, .pulse3, .pulse4, .pulse5, .pulse6, .pulse7, .pulse8{
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    border: 1px solid #00c6ff;
+    box-shadow: 0 0 5px #00c6ff;
+    position: relative;
+    transform: scale(0);
+    animation: pulse 1s ease-out;
+} 
+
+/*ball text*/
+.ball1 a, .ball2 a, .ball3 a, .ball4 a, .ball5 a, .ball6 a, .ball7 a, .ball8 a{
+    float: left;
+    height: 20px;
+    width: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.ball1 a small, .ball2 a small, .ball3 a small, .ball4 a small, .ball5 a small, .ball6 a small, 
+.ball7 a small, .ball8 a small{
+    background: #000;
+    text-align: center;
+    width: 70px;
+    padding: 5px;
+    border-left: 1px solid #111;
+    border-top: 1px solid #111;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-radius: 3px;
+    display: none;
+    color: #fff;
+    font-size: 0.8em;
+    text-indent: 0;
+}
+
+.ball1 a:hover small, .ball2 a:hover small, .ball3 a:hover small, .ball4 a:hover small, 
+.ball5 a:hover small, .ball6 a:hover small, .ball7 a:hover small, .ball8 a:hover small{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 50%;
+    margin: -40px;
+    z-index: 9999;
+    animation: tooltip .25s linear;
+}
+
+.graphic-year{
+    font-size: 0.8rem;
+    padding-top: 25px;
+}
+
+/*coordinate points*/
+.ball1{
+    top: 200px;
+    left: 10%;
+}
+
+.ball2{
+    top: 141.48px;
+    left: 20%;
+}
+
+.ball3{
+    top: 141.56px;
+    left: 30%;
+}
+
+.ball4{
+    top: 130.60px;
+    left: 40%;
+}
+
+.ball5{
+    top: 129.66px;
+    left: 50%;
+}
+
+.ball6{
+    top: 129.31px;
+    left: 60%;
+}
+
+.ball7{
+    top: 107.62px;
+    left: 70%;
+}
+
+.ball8{
+    top: 86.57px;
+    left: 80%;
+}
+
+/*animations*/
+@keyframes move {
+    0% { 
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    }
+}
+
+@keyframes move1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 12%;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@keyframes move2 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 10%;
+        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
+    };
+}
+
+@keyframes point {
+    0%  {-moz-transform: scale(0,0);
+}
+
+100% {
+    -moz-transform: scale(1,1);
+}	
+}
+
+@keyframes pulse {
+    0% {
+        -moz-transform: scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        -moz-transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        -moz-transform: scale(1.75);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: scale(0);
+        opacity: 0;
+    };
+} 
+
+@keyframes tooltip {
+    0%  { -moz-transform: scale(0,0);
+    opacity: 0;
+}
+
+50% {
+    -moz-transform: scale(1.2,1.2);
+    opacity: 0.3;
+}
+
+75% {
+    -moz-transform: scale(0.9,0.9);
+    opacity: 0.7;
+}
+
+100% {
+    -moz-transform: scale(1,1);
+    opacity: 1;
+}
+}
+
+
+/**************************************/
+/*ABOUT APP SECTION*/
+/**************************************/
+
+.about-app{
+    display: flex;
+}
+
+.about-app-text{
+    width: 50%;
+}
+
+.about-app-image{
+    width: 50%;
+}
+
+.about-app img{
+    width: 100%;
+}
+
+
+/*REGISTER SECTION*/
+
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    height: 350px;
+}
+
+.register h1{
+    margin-bottom: 5%;
+}
