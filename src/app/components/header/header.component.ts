@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  loginButton: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  activateLogin(){
+    this.loginButton = !this.loginButton;
   }
 
 }

@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+.content{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+/* STEP 1 */
+
+.step-1{
+    width: 100%;
+    padding: 10% 5% 5% 5%;
+}
+
+.step-1-img img{
+    width: 90%;
+}
+
+.step-1-text ul{
+    margin-top: 5%;
+}
+
+.step-1-btn{
+    width: 150px;
+    padding: 2% 1%;
+    margin: 0 auto;
+    background-color: #2ac67c;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* STEP 2 */
+.step-2{
+    margin-left: 100%;
+    height: 100%;
+    padding: 10%;
+    background-color: white;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn{
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+.footer-sticky{
+    display: block;
+    width: 100%;
+    padding: 0;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    color: white;
+    z-index: -1;
+    background-image: url("../../../assets/images/footer_background.png");
+}
+
+.content{
+    background-color: #242424d5;
+    padding: 5%;
+}
+
+.end-footer{
+    height: 80px;
+    background-color: #161616d5;
+}

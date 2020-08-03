@@ -1,10 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .content{
     min-height: 100%;
+}
+
+h1, h2, h3, h4{
+    color: #034872;
 }
 
 
@@ -14,28 +19,55 @@
 
 .top-banner{
     display: flex;
-    margin: 0;
-    padding: 0;
-    min-height: 500px;
+    min-height: 75vh;
+    height: 75vh;
     background-image: url(../../../assets/images/water_banner.jpg);
     background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
 }
 
 .top-banner-text{
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
     padding: 5%;
 }
 
-.top-banner-image{
-    width: 50%;
+.top-banner-text img{
+    width: 70%;
 }
 
-.top-banner-image img{
-    max-width: 80%;
+.top-banner-text h1{
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.top-banner-text p{
+    margin-top: 20px;
+    text-align: justify;
 }
 
 .download-button{
-    margin-top: 10%;
+    color: white;
+    background-color: #23a366;
+    border: 1px solid #0d683d;
+    width: 180px;
+    padding: 3% 5%;
+    margin-top: 5%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.top-banner-image{
+    width: 45%;
+}
+
+.top-banner-image img{
+    max-width: 100%;
 }
 
 
@@ -47,11 +79,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 12% 5% 15% 5%;
+    background-color: rgb(245, 245, 245);
+}
+
+.title-features-container{
+    width: 430px;
+}
+
+.type-effect-features{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 34px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typeEffectFeatures 1s steps(21, end);
 }
 
 .features-row{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 8%;
 }
 
 .feature{
@@ -59,11 +107,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .feature img{
-    width: 30%;
-    height: 100%;
+    width: 100px;
+}
+
+.feature h3{
+    margin: 20px;
+}
+
+.feature p{
+    padding: 0 20%;
+    text-align: justify;
+}
+
+@keyframes typeEffectFeatures{
+    from{
+        width: 0%;
+    }
 }
 
 
@@ -77,10 +140,126 @@
 
 .info-image{
     width: 50%;
+    background-color: black;
+}
+
+.info-text{
+    width: 50%;
+    padding: 5%;
+    background-color: white;
 }
 
 .info-image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.info-text p{
+    margin: 8% 0 8% 0;
+}
+
+.info-text li{
+    margin-bottom: 2%;
+}
+
+/* .places{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.place{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% 0;
+    width: 30%;
+}
+
+.place img{
+    width: 126px;
+} */
+
+
+/**************************************/
+/*PUBLIC HEALTH IMPLICATIONS SECTION*/
+/**************************************/
+.public-health{
+    padding: 10% 5%;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+}
+
+.public-health-implications{
+    height: 400px;
+    background-image: url("../../../assets/images/public_health.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.implications-row{
+    display: flex;
+    height: 50%;
+    align-items: center;
+}
+
+.implications-row:nth-child(1){
+    justify-content: space-between;
+}
+
+.implications-row:nth-child(2){
+    justify-content: center;
+}
+
+.implication {
+    display: flex;
+    width: 40%;
+}
+
+.implication:nth-child(2){
+    justify-content: flex-end;
+}
+
+.implication-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 10%;
+    background-color: #034872;
+    font-family: 'Roboto Mono', monospace;
+    cursor: pointer;
+}
+
+.implication-text{
+    background: #000;
+    text-align: center;
+    padding: 5px;
+    width: 50%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8em;
+    text-indent: 0;
+}
+
+.public-health h1, .public-health h3{
+    text-align: center;
+}
+
+.public-health h1{
+    margin-bottom: 5%;
+}
+
+.public-health h3{
+    color: rgb(63, 63, 63);
+    margin-bottom: 2%;
 }
 
 
@@ -92,10 +271,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 8% 5%;
+    background-color: rgb(245,245,245);
+    background-image: url("../../../assets/images/stats_background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.statistics h1{
+    color: white;
 }
 
 .graphic{
-    height: 300px;
+    height: 250px;
     min-width: 800px;
     width: 800px;
     position: relative;
@@ -105,7 +293,7 @@
 .join-line1, .join-line2, .join-line3, .join-line4, .join-line5, .join-line6, 
 .join-line7{
     position: absolute;
-    background: red;
+    background: rgb(187, 17, 17);
     width: 0px;
     height: 3px;
 }
@@ -168,7 +356,8 @@
 
 /*balls*/
 .ball1, .ball2, .ball3, .ball4, .ball5, .ball6, .ball7, .ball8{
-    background-color: #2187e7;
+    background-color: red;
+    border: 1px solid white;
     width: 20px;
     height: 20px;
     border-radius: 50px;
@@ -178,7 +367,7 @@
 }
 
 .ball1{
-    animation: point 0.1s linear forwards;
+    animation: point 0.1s 0.95s linear forwards;
 }
 
 .ball2{
@@ -214,8 +403,7 @@
     width: 15px;
     height: 15px;
     border-radius: 30px;
-    border: 1px solid #00c6ff;
-    box-shadow: 0 0 5px #00c6ff;
+    border: 1px solid black;
     position: relative;
     transform: scale(0);
     animation: pulse 1s ease-out;
@@ -236,11 +424,7 @@
     text-align: center;
     width: 70px;
     padding: 5px;
-    border-left: 1px solid #111;
-    border-top: 1px solid #111;
-    border-right: 1px solid #333;
-    border-bottom: 1px solid #333;
-    border-radius: 3px;
+    border-radius: 5px;
     display: none;
     color: #fff;
     font-size: 0.8em;
@@ -261,6 +445,7 @@
 .graphic-year{
     font-size: 0.8rem;
     padding-top: 25px;
+    color: white;
 }
 
 /*coordinate points*/
@@ -305,17 +490,6 @@
 }
 
 /*animations*/
-@keyframes move {
-    0% { 
-        width: 0px;
-    }
-
-    100% {
-        width: 100%;
-        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
-    }
-}
-
 @keyframes move1 {
     0% {
         width: 0px;
@@ -323,7 +497,6 @@
 
     100% {
         width: 12%;
-        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
     };
 }
 
@@ -334,60 +507,61 @@
 
     100% {
         width: 10%;
-        box-shadow: 0px 0px 5px 1px rgba(0,198,255,0.5);
     };
 }
 
 @keyframes point {
-    0%  {-moz-transform: scale(0,0);
-}
+    0%  {
+        transform: scale(0,0);
+    }
 
-100% {
-    -moz-transform: scale(1,1);
-}	
+    100% {
+        transform: scale(1,1);
+    }	
 }
 
 @keyframes pulse {
     0% {
-        -moz-transform: scale(0);
+        transform: scale(0);
         opacity: 0;
     }
 
     10% {
-        -moz-transform: scale(1);
+        transform: scale(1);
         opacity: 0.5;
     }
 
     50% {
-        -moz-transform: scale(1.75);
+        transform: scale(1.75);
         opacity: 0;
     }
 
     100% {
-        -moz-transform: scale(0);
+        transform: scale(0);
         opacity: 0;
     };
 } 
 
 @keyframes tooltip {
-    0%  { -moz-transform: scale(0,0);
-    opacity: 0;
-}
+    0%  { 
+        transform: scale(0,0);
+        opacity: 0;
+    }
 
-50% {
-    -moz-transform: scale(1.2,1.2);
-    opacity: 0.3;
-}
+    50% {
+        transform: scale(1.2,1.2);
+        opacity: 0.3;
+    }
 
-75% {
-    -moz-transform: scale(0.9,0.9);
-    opacity: 0.7;
-}
+    75% {
+        transform: scale(0.9,0.9);
+        opacity: 0.7;
+    }
 
-100% {
-    -moz-transform: scale(1,1);
-    opacity: 1;
-}
+    100% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
 }
 
 
@@ -397,32 +571,56 @@
 
 .about-app{
     display: flex;
+    padding: 5% 0;
+    background-color: white;
 }
 
 .about-app-text{
     width: 50%;
+    padding: 5%;
 }
 
 .about-app-image{
     width: 50%;
 }
 
-.about-app img{
+.about-app-text p{
+    margin: 5% 0;
+}
+
+.about-app-image img{
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 
+/**************************************/
 /*REGISTER SECTION*/
+/**************************************/
+
+.register-background{
+    background-image: url("../../../assets/images/register_background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 .register{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: green;
-    height: 350px;
+    background-color: #0d683eab;
+    height: 450px;
+    color: white;
 }
 
-.register h1{
-    margin-bottom: 5%;
+.register-end{
+    height: 100px;
+    background-color: #0e472cf1;
+}
+
+.register h1, .register h2{
+    margin-bottom: 2%;
+    color: white;
 }

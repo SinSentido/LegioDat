@@ -1,0 +1,10 @@
+.company-logo img{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.btn{
+    background-color: #2ac67c;
+    border: none;
+    margin-top: 5%;
+}

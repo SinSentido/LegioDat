@@ -1,0 +1,50 @@
+<div class="content">
+  <div class="step-1 row" *ngIf="step1">
+    <div class="step-1-img col-md-6">
+      <img src="../../../assets/images/register_step1.png" alt="">
+    </div>
+    <div class="step-1-text col-md-6">
+      <h2>Características de la suscripción</h2>
+      <ul>
+        <li>El precio es de <span>4,99€</span> cada 6 meses</li>
+        <li>Acceso al panel de administración de la página web</li>
+        <li>Acceso a la aplicación para móvil</li>
+        <li>Soporte técnico para cualquier incidencia</li>
+      </ul>
+    </div>
+  </div>
+  <div class="step-1-btn" (click)="activateStep2()" *ngIf="step1">Continuar</div>
+
+  <div class="step-2" *ngIf="step2">
+    <div class="step-2-form">
+      <form>
+        <p>Datos de la cuenta</p>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="bmd-label-float">Email</label>
+            <input type="email" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label class="bmd-label-float">Confirmar email</label>
+            <input type="email" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="bmd-label-float">Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label class="bmd-label-float">Confirmar contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+        </div>
+
+        <p>Datos de pago</p>
+        <hr>
+        <div class="row"></div>
+      </form>
+    </div>
+  </div>
+</div>

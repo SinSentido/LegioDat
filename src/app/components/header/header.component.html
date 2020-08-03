@@ -1,1 +1,49 @@
-<p>header works!</p>
+<!-- contact bar -->
+<div class="header-contact">
+    <div class="contact-info">
+        <div class="phone">
+            <i class="fas fa-mobile-alt"></i>
+            <p>633 56 85 69</p>
+        </div>
+        <div class="mail">
+            <i class="fas fa-envelope-square"></i>
+            <p>contacto@legiodat.com</p>
+        </div>
+    </div>
+    <div class="rrss">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-instagram-square"></i>
+    </div>
+</div>
+
+<!-- navigation menu -->
+<nav>
+    <div class="content">
+        <div class="menu">
+            <img src="../../../assets/images/legiodat_letter_logo_header.png" alt="">
+            <ul class="menu-options">
+                <li>Home</li>
+                <li>Regulación</li>
+                <li>La aplicación</li>
+            </ul>
+        </div>
+        <div class="register">
+            <ul>
+                <li class="login-button" (click)="activateLogin()"><p>Iniciar sesión</p></li>
+                <li class="register-button"><p>Registrarse</p></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- login-bar -->
+    <div class="show-login-bar" *ngIf="loginButton">
+        <app-login></app-login>
+    </div>
+
+    <div class="hide-login-bar" *ngIf="!loginButton">
+        <app-login></app-login>
+    </div>
+</nav>
+
